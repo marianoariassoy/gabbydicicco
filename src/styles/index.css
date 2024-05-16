@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-text-primary: #1d1d1b;
+  --color-primary: #00a19a;
+  --color-secondary: #f3edd9;
+}
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  accent-color: var(--color-primary);
+  font-optical-sizing: auto;
+  font-size: 15px;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.font-secondary {
+  font-family: 'Alegreya', serif;
+}
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-primary-2 {
+  background-color: #94b0b6;
+}
+.bg-primary-3 {
+  background-color: #aacad0;
+}
+.bg-primary-4 {
+  background-color: #bee2e9;
+}
+.bg-black {
+  background-color: var(--color-text-primary);
+}
+.border-black {
+  border-color: var(--color-text-primary);
+}
+.indicators {
+  position: absolute;
+  z-index: 1000;
+  bottom: 2rem;
+  left: 2rem;
+}
+.indicators li {
+  margin: 0 0.3rem !important;
+}
+.a-main:hover {
+  color: var(--color-primary);
+}
+.max-w-7xl {
+  max-width: 75rem;
+}
+.text-black {
+  color: var(--color-text-primary);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
