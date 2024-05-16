@@ -2,7 +2,10 @@ import { Down } from '../../components/icons'
 
 const Bio = () => {
   return (
-    <section className='mb-12'>
+    <section
+      className='mb-12'
+      id='Bio'
+    >
       <div className='w-full max-w-7xl m-auto px-6 gap-y-6 flex flex-col-reverse lg:flex-row items-center'>
         <div className='lg:w-2/6'>
           <h2 className='text-3xl lg:text-6xl lg:text-right font-secondary italic font-bold text-black/50 lg:pr-12'>

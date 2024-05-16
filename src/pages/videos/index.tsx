@@ -33,17 +33,18 @@ const Index = () => {
   return (
     <Layout>
       <Submenu>
-        <div className='flex gap-x-3 text-primary'>
+        <div className='flex text-primary [&>a:last-child::after]:content-[]'>
           {data.map((item, index) => (
-            <button
+            <a
               key={index}
-              className={`hover:text-primary uppercase hover:text-black ${
+              href='#'
+              className={`hover:text-primary uppercase hover:text-black split ${
                 index === itemSelected ? 'text-black' : 'text-primary'
               }`}
               onClick={() => setItemSelected(index)}
             >
               {item.title}
-            </button>
+            </a>
           ))}
         </div>
       </Submenu>

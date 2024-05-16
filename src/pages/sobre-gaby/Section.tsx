@@ -5,6 +5,7 @@ const Section = ({ data }) => {
     <section
       className='border-t-2 border-primary'
       style={{ backgroundColor: `${data.bgColor}`, color: `${data.color}` }}
+      id={data.title.split(' ')[0]}
     >
       <div className='w-full max-w-6xl m-auto px-6 flex flex-col gap-y-12'>
         <div className='flex flex-col lg:flex-row'>
@@ -23,9 +24,12 @@ const Section = ({ data }) => {
         </div>
       </div>
       <div className='flex justify-end px-6'>
-        <button className='a-main text-white transition-all'>
+        <a
+          href='#Bio'
+          className='a-main text-white transition-all scroll'
+        >
           <Up />
-        </button>
+        </a>
       </div>
     </section>
   )

@@ -52,12 +52,12 @@ const Index = () => {
   return (
     <Layout>
       <Submenu>
-        <div className='text-primary uppercase flex flex-wrap gap-x-3 lg:gap-x-4'>
+        <div className='text-primary uppercase flex flex-wrap lg:gap-x-4 [&>a:last-child::after]:content-[]'>
           {menu[1].sections.map((item, index) => (
             <a
               key={index}
               href={item}
-              className='hover:text-black'
+              className='hover:text-black split'
             >
               {item}
             </a>

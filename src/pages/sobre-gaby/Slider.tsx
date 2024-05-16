@@ -64,9 +64,12 @@ const Slider = () => {
         </Slide>
       </div>
       <div className='w-full flex justify-end px-6'>
-        <button className='a-main transition-all'>
+        <a
+          href='#Bio'
+          className='a-main transition-all scroll'
+        >
           <Up />
-        </button>
+        </a>
       </div>
     </section>
   )

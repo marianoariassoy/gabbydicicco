@@ -5,11 +5,13 @@ import Submenu from '../../components/Submenu'
 import Bio from './Bio'
 import Slider from './Slider'
 import Section from './Section'
+import scroll from './scroll'
 
 const Index = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
     document.title = 'Gabby De Cicco - Sobre Gabby'
+    scroll()
   }, [])
 
   const data = [
@@ -71,12 +73,12 @@ const Index = () => {
   return (
     <Layout>
       <Submenu>
-        <div className='text-primary uppercase flex flex-wrap gap-x-3 lg:gap-x-4'>
+        <div className='text-primary uppercase flex flex-wrap lg:gap-x-4 [&>a:last-child::after]:content-[]'>
           {menu[0].sections.map((item, index) => (
             <a
               key={index}
-              href={item}
-              className='hover:text-black'
+              href={'#' + item.split(' ')[0]}
+              className='hover:text-black scroll split'
             >
               {item}
             </a>
