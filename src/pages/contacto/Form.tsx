@@ -24,13 +24,13 @@ const FormContacto = () => {
   const onSubmit = (data: Inputs) => {
     setSending(true)
     const sender = {
-      to: 'info@naum-knop.org',
-      from: 'info@naum-knop.org',
-      from_name: 'Naum Knop',
+      to: 'hola@marianoarias.soy',
+      from: 'no-reply@gabbydecicco.com.ar',
+      from_name: 'Gabby De Cicco',
       subject: 'Contacto'
     }
 
-    axios.post('https://naum-knop.org/backend/send-email.php', { ...data, ...sender }).then(data => {
+    axios.post('http://gabbydecicco.com.ar/backend/send-email.php', { ...data, ...sender }).then(data => {
       if (data.data === 'success') {
         setSended(true)
         setSending(false)

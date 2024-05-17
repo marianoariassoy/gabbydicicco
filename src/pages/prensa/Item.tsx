@@ -6,7 +6,7 @@ const Item = ({ data }) => {
       href={data.url}
       target='_blank'
       rel='noopener noreferrer'
-      className='border-b border-primary block'
+      className='border-b border-primary block fade-in'
     >
       <div className='flex items-center gap-x-6 hover:bg-black/10 a-main transition-all cursor-pointer text-sm lg:text-base lg:gap-x-12 p-6 lg:p-12'>
         <div className='text-primary'>

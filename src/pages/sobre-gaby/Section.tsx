@@ -1,11 +1,25 @@
+import { useEffect, useState } from 'react'
 import { Down, Up } from '../../components/icons'
+import HTML from '../../hooks/useHTML'
+import scroll from './scroll'
 
-const Section = ({ data }) => {
+const Section = ({ data, index, colors }) => {
+  const [color, setColor] = useState('')
+  const [bgColor, setbgColor] = useState('')
+
+  useEffect(() => {
+    if (colors.length > 0) {
+      setColor(colors[index].color)
+      setbgColor(colors[index].bgColor)
+    }
+    scroll()
+  }, [colors, index])
+
   return (
     <section
-      className='border-t-2 border-primary'
-      style={{ backgroundColor: `${data.bgColor}`, color: `${data.color}` }}
-      id={data.title.split(' ')[0]}
+      className={`border-t-2 border-primary ${color}`}
+      style={{ backgroundColor: `${bgColor}` }}
+      id={'section' + index}
     >
       <div className='w-full max-w-6xl m-auto px-6 flex flex-col gap-y-12'>
         <div className='flex flex-col lg:flex-row'>
@@ -19,13 +33,13 @@ const Section = ({ data }) => {
             <h2 className='text-3xl lg:text-4xl font-secondary italic font-bold text-black'>{data.title}</h2>
           </div>
           <div className='lg:w-3/4 mb-6 text-sm lg:text-base'>
-            <p>{data.text}</p>
+            <HTML text={data.text} />
           </div>
         </div>
       </div>
       <div className='flex justify-end px-6'>
         <a
-          href='#Bio'
+          href='#section0'
           className='a-main text-white transition-all scroll'
         >
           <Up />

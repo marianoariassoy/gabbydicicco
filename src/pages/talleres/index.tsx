@@ -1,8 +1,12 @@
 import { useEffect } from 'react'
 import Layout from '../../layout/Layout'
 import Item from './Item'
+import useFetch from '../../hooks/useFetch'
+import Loader from '../../components/Loader'
 
 const Index = () => {
+  const { data, loading } = useFetch(`/talleres`)
+
   useEffect(() => {
     window.scrollTo(0, 0)
     document.title = 'Gabby De Cicco - Talleres'
@@ -14,7 +18,16 @@ const Index = () => {
   return (
     <Layout>
       <section>
-        <Item />
+        {loading ? (
+          <Loader />
+        ) : (
+          data.map(item => (
+            <Item
+              key={item.id}
+              data={item}
+            />
+          ))
+        )}
       </section>
     </Layout>
   )

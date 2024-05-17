@@ -18,7 +18,7 @@ const Index = () => {
       <section>
         <div className='w-full max-w-7xl m-auto px-6 flex flex-col lg:flex-row'>
           <div className='lg:w-2/6'></div>
-          <div className='lg:w-4/6 pt-12 lg:pt-32'>
+          <div className='lg:w-4/6 pt-12 lg:pt-32 fade-in'>
             <Form />
           </div>
         </div>

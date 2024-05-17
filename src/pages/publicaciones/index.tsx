@@ -4,50 +4,15 @@ import Layout from '../../layout/Layout'
 import Submenu from '../../components/Submenu'
 import Item from './Item'
 import { Down } from '../../components/icons'
+import useFetch from '../../hooks/useFetch'
 
 const Index = () => {
+  const { data, loading } = useFetch(`/libros`)
+
   useEffect(() => {
     window.scrollTo(0, 0)
     document.title = 'Gabby De Cicco - Publicaciones'
   }, [])
-
-  const data = [
-    {
-      id: 1,
-      title: 'Bebo de mis manos',
-      year: '2022',
-      image:
-        'https://images.pexels.com/photos/21287054/pexels-photo-21287054/free-photo-of-comida-ciudad-vacaciones-calle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-    },
-    {
-      id: 2,
-      title: 'Bebo de mis manos',
-      year: '2022',
-      image:
-        'https://images.pexels.com/photos/21287054/pexels-photo-21287054/free-photo-of-comida-ciudad-vacaciones-calle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-    },
-    {
-      id: 3,
-      title: 'Bebo de mis manos',
-      year: '2022',
-      image:
-        'https://images.pexels.com/photos/21287054/pexels-photo-21287054/free-photo-of-comida-ciudad-vacaciones-calle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-    },
-    {
-      id: 4,
-      title: 'Bebo de mis manos',
-      year: '2022',
-      image:
-        'https://images.pexels.com/photos/21287054/pexels-photo-21287054/free-photo-of-comida-ciudad-vacaciones-calle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-    },
-    {
-      id: 5,
-      title: 'Bebo de mis manos',
-      year: '2022',
-      image:
-        'https://images.pexels.com/photos/21287054/pexels-photo-21287054/free-photo-of-comida-ciudad-vacaciones-calle.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load'
-    }
-  ]
 
   return (
     <Layout>
@@ -73,12 +38,13 @@ const Index = () => {
         </div>
 
         <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 pb-12'>
-          {data.map((item, index) => (
-            <Item
-              key={index}
-              data={item}
-            />
-          ))}
+          {!loading &&
+            data.map((item, index) => (
+              <Item
+                key={index}
+                data={item}
+              />
+            ))}
         </div>
       </div>
     </Layout>
