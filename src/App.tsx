@@ -3,6 +3,7 @@ import Home from './pages/home'
 import SobreGabby from './pages/sobre-gaby'
 import Publicaciones from './pages/publicaciones'
 import PublicacionesDetalles from './pages/publicaciones/Detalles'
+import PublicacionesExtras from './pages/publicaciones/Extras'
 import Talleres from './pages/talleres'
 import Videos from './pages/videos'
 import Prensa from './pages/prensa'
@@ -27,6 +28,10 @@ function App() {
       <Route
         path='/publicaciones/:id'
         component={PublicacionesDetalles}
+      />
+      <Route
+        path='/publicaciones/extras/:id/:id2'
+        component={PublicacionesExtras}
       />
       <Route
         path='/talleres'

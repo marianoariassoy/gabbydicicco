@@ -42,7 +42,7 @@ const Index = () => {
   return (
     <Layout>
       <Submenu>
-        <div className='text-primary uppercase flex flex-wrap lg:gap-x-4 [&>a:last-child::after]:content-[]'>
+        <div className='text-primary uppercase flex flex-wrap [&>a:last-child::after]:content-[]'>
           {menu[0].sections.map((item, index) => (
             <a
               key={index}
@@ -58,7 +58,7 @@ const Index = () => {
         <Loader />
       ) : (
         <section
-          className='fade-in'
+          className='fade-in mt-9'
           id='top'
         >
           <Bio text={data[0].text} />
@@ -67,6 +67,7 @@ const Index = () => {
             <Section
               key={index}
               data={item}
+              title={menu[0].sections[index + 1]}
               index={index + 1}
               colors={colors}
             />

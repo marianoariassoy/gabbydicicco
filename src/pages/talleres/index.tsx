@@ -19,7 +19,9 @@ const Index = () => {
     <Layout>
       <section>
         {loading ? (
-          <Loader />
+          <div className='h-screen'>
+            <Loader />
+          </div>
         ) : (
           data.map(item => (
             <Item

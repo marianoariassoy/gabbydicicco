@@ -71,7 +71,6 @@ body {
 .split::after {
   content: '-';
   display: inline-block;
-  margin: 0 0.25rem;
-
+  margin: 0 0.4rem;
   color: var(--color-primary);
 }

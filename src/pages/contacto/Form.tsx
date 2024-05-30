@@ -24,7 +24,7 @@ const FormContacto = () => {
   const onSubmit = (data: Inputs) => {
     setSending(true)
     const sender = {
-      to: 'hola@marianoarias.soy',
+      to: 'gdecicco@gmail.com',
       from: 'no-reply@gabbydecicco.com.ar',
       from_name: 'Gabby De Cicco',
       subject: 'Contacto'
@@ -50,7 +50,7 @@ const FormContacto = () => {
       {error ? (
         <div className='text-xl text-primary'>Se produjo un error al enviar el mensaje</div>
       ) : sended ? (
-        <div className='text-xl text-primary'>¡Su mensaje fue enviado! Gracias por contactarte con nosotros.</div>
+        <div className='text-xl text-primary'>¡Tu mensaje fue enviado!</div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='flex flex-col gap-y-3'>

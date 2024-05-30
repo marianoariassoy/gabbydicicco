@@ -40,7 +40,7 @@ const Index = () => {
               ))}
             </div>
           </Submenu>
-          <div className='w-full max-w-7xl m-auto px-6 flex flex-col gap-y-12'>
+          <div className='w-full max-w-7xl m-auto px-6 flex flex-col gap-y-12 mt-9'>
             <div className='flex'>
               <div className='lg:w-2/6'></div>
               <div className='lg:w-4/6 text-primary'>

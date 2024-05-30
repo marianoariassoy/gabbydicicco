@@ -1,7 +1,7 @@
 import { Fade } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 import Image from '../../components/Image'
-import { Back, Forward, Up } from '../../components/icons'
+import { Back, Forward, Up, Down } from '../../components/icons'
 import useFetch from '../../hooks/useFetch'
 import Loader from '../../components/Loader'
 
@@ -27,8 +27,17 @@ const Slider = () => {
   }
 
   return (
-    <section>
-      <div className='max-w-4xl m-auto w-screen lg:w-full '>
+    <section className='border-t border-primary'>
+      <div className='flex flex-col lg:flex-row max-w-7xl m-auto px-6 mb-6 lg:mb-12'>
+        <div className='lg:w-2/6'></div>
+        <div className='lg:w-4/6 text-primary'>
+          <Down />
+        </div>
+      </div>
+      <div className='max-w-7xl m-auto px-6'>
+        <h2 className='text-3xl lg:text-4xl font-secondary italic font-bold text-black'>Algunas Fotos</h2>
+      </div>
+      <div className='max-w-4xl m-auto w-screen lg:w-full mt-6 lg:-mt-8'>
         <Fade {...sliderProperties}>
           {loading ? (
             <Loader />

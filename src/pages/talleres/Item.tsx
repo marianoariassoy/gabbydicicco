@@ -8,13 +8,13 @@ const Item = ({ data }) => {
       <Submenu>
         <h1 className='font-bold text-primary uppercase'>{data.title}</h1>
       </Submenu>
-      <div className='w-full max-w-7xl m-auto px-6 flex flex-col-reverse lg:flex-row mb-6 fade-in'>
-        <div className='lg:w-2/6 pt-6 lg:pt-12 lg:pr-12 flex justify-end'>
+      <div className='w-full max-w-7xl m-auto px-6 flex flex-col-reverse lg:flex-row mb-6 fade-in '>
+        <div className='lg:w-2/6 pt-6 lg:pt-12 lg:pr-12 flex justify-end mt-9'>
           <div className='font-bold italic lg:text-right text-xl w-full'>
             Desde 1990 leyendo, escribiendo <br /> y difundiendo poesía
           </div>
         </div>
-        <div className='lg:w-4/6 flex flex-col gap-y-6 text-white'>
+        <div className='lg:w-4/6 flex flex-col gap-y-6 text-white mt-9'>
           <div className='text-black'>
             <Down />
           </div>

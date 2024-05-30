@@ -3,9 +3,10 @@ import { Link } from 'wouter'
 
 const Item = ({ data }) => {
   return (
-    <article className='flex flex-col gap-y-3'>
+    <article className='flex flex-col gap-y-3 '>
       <Link to={`/publicaciones/${data.id}`}>
-        <div className='aspect-[5/7] hover:opacity-80 transition-all'>
+        <div className='aspect-[5/7] relative'>
+          <div className='z-30 absolute w-full h-full top-0 right-0 bg-secondary opacity-0 hover:opacity-60 transition-all'></div>
           <Image
             src={data.image}
             alt={data.title}

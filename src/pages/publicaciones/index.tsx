@@ -17,19 +17,19 @@ const Index = () => {
   return (
     <Layout>
       <Submenu>
-        <div className='text-primary uppercase flex flex-wrap lg:gap-x-4 [&>a:last-child::after]:content-[]'>
+        <div className='text-primary uppercase flex flex-wrap [&>a:last-child::after]:content-[]'>
           {menu[1].sections.map((item, index) => (
             <a
               key={index}
-              href={item}
+              href={item.url}
               className='hover:text-black split'
             >
-              {item}
+              {item.title}
             </a>
           ))}
         </div>
       </Submenu>
-      <div className='w-full max-w-7xl m-auto px-6'>
+      <section className='w-full max-w-7xl m-auto px-6 mt-9'>
         <div className='flex'>
           <div className='lg:w-2/6'></div>
           <div className='text-primary mb-6'>
@@ -46,7 +46,7 @@ const Index = () => {
               />
             ))}
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

@@ -19,7 +19,7 @@ const Index = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className='w-full max-w-7xl m-auto [&>a:last-child]:border-0 '>
+        <div className='w-full max-w-7xl m-auto [&>a:last-child]:border-0 mt-9'>
           {data.map(item => (
             <Item
               key={item.id}
